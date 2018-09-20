@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/general-programming/node-sodium.png)](http://travis-ci.org/general-programming/node-sodium) [![Build Status for Windows](https://ci.appveyor.com/api/projects/status/cromwc8pngi5hoa2/branch/master?svg=true)](https://ci.appveyor.com/project/linuxgemini/node-sodium/branch/master)
+[![Build Status](https://secure.travis-ci.org/general-programming/node-sodium.png)](http://travis-ci.org/general-programming/node-sodium) [![Build Status for Windows](https://dev.azure.com/general-programming/node-sodium/_apis/build/status/general-programming.node-sodium)](https://dev.azure.com/general-programming/node-sodium/_build/latest?definitionId=2)
 
 
 # node-sodium
