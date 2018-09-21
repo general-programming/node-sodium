@@ -20,4 +20,4 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testRunner: JUnit
-    testResultsFile: ./test-results.xml
+    testResultsFile: "**/test-*.xml"
