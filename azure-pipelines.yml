@@ -9,14 +9,28 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '8.x'
+    versionSpec: '8.12.0'
   displayName: 'Install Node.js'
 
+# The script below is taken from
+# https://github.com/atom/atom/blob/9c58988d9be5deec12069ec88a5f4ecd5ddfd4e3/script/vsts/platforms/windows.yml
+#
+#- script: |
+#    ECHO Installing npm-windows-upgrade
+#    CALL npm install --global --production npm-windows-upgrade
+#    ECHO Installing npm
+#    CALL npm-windows-upgrade --no-spinner --no-prompt --npm-version 6.4.1
+#  displayName: 'Install npm 6.4.1'
+
 - script: |
-    npm config set msvs_version 2015
-    npm install
-    npm test
-  displayName: 'npm install && npm test'
+    CALL npm config set msvs_version 2015
+    CALL npm install
+  displayName: 'npm install'
+
+- script: |
+    CALL npm test
+  displayName: 'npm test'
+
 - task: PublishTestResults@2
   inputs:
     testRunner: JUnit
