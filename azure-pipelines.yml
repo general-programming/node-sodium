@@ -13,6 +13,14 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    ECHO Appearently the Agent has an older version of npm, thus causing the install script to stop after preinstall
+    ECHO Installing npm-windows-upgrade
+    npm install --global --production npm-windows-upgrade
+    ECHO Installing npm
+    npm-windows-upgrade --no-spinner --no-prompt --npm-version 6.4.1
+  displayName: 'Install npm 6.4.1'
+
+- script: |
     npm config set msvs_version 2015
     npm install
   displayName: 'npm install'

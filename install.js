@@ -390,15 +390,12 @@ if (os.platform() !== "win32") {
         });
     } else {
         console.log("Install Mode");
-        var re1a1 = fs.readdirSync(__dirname);
-        console.log(re1a1.join("\n");
-        process.exit(1);
         run("node-gyp rebuild", 0).then(() => {
             console.log("Copy lib files to Release folder");
             var files = libFiles.slice(0); // clone array
             copyFiles(files, function() {
                 console.log("Done copying files.");
-                process.exit(1);
+                process.exit(0);
             });
         });
     }
