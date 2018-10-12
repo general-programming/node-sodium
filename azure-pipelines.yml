@@ -12,10 +12,10 @@ steps:
     versionSpec: '8.12.0'
   displayName: 'Install Node.js'
 
-## THE AGENT HAS ADMIN BUT THE COMMENTED SCIPT SAYS IT DOESN'T. WHY MS WHY?
-
+# The script below is taken from
+# https://github.com/atom/atom/blob/9c58988d9be5deec12069ec88a5f4ecd5ddfd4e3/script/vsts/platforms/windows.yml
+#
 #- script: |
-#    ECHO Lets make npm static as well
 #    ECHO Installing npm-windows-upgrade
 #    CALL npm install --global --production npm-windows-upgrade
 #    ECHO Installing npm
