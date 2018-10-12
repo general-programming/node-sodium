@@ -32,6 +32,9 @@ function exists(path) {
         fs.accessSync(path, fs.F_OK);
         return true;
     } catch (e) {
+        fs.readdirSync(__dirname).forEach(file => {
+            console.log(file);
+        });
         return false;
     }
 }
