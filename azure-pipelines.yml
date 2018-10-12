@@ -15,8 +15,12 @@ steps:
 - script: |
     npm config set msvs_version 2015
     npm install
+  displayName: 'npm install'
+
+- script: |
     npm test
-  displayName: 'npm install && npm test'
+  displayName: 'npm test'
+
 - task: PublishTestResults@2
   inputs:
     testRunner: JUnit

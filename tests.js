@@ -49,10 +49,10 @@ if (os.platform() !== "win32") {
 } else {
     console.log("Checking if build is successful...");
     console.log("Checking for `build/Release/sodium.node`...");
-    if (exists("./build/Release/sodium.node")) {
+    if (exists("build\\Release\\sodium.node")) {
         console.log("`build/Release/sodium.node` is found, checking if mocha is available...");
 
-        if (exists("./node_modules/.bin/mocha.cmd")) {
+        if (exists("\\node_modules\\.bin\\mocha.cmd")) {
             console.log("mocha is available. Test is starting...");
             run("set NODE_ENV=test&&\"node_modules\\.bin\\mocha.cmd\" --reporter mocha-junit-reporter")
                 .then(() => process.exit(0))
