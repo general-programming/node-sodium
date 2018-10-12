@@ -15,18 +15,18 @@ steps:
 - script: |
     ECHO Lets make npm static as well
     ECHO Installing npm-windows-upgrade
-    CALL "npm install --global --production npm-windows-upgrade"
+    CALL npm install --global --production npm-windows-upgrade
     ECHO Installing npm
-    CALL "npm-windows-upgrade --no-spinner --no-prompt --npm-version 6.4.1"
+    CALL npm-windows-upgrade --no-spinner --no-prompt --npm-version 6.4.1
   displayName: 'Install npm 6.4.1'
 
 - script: |
-    CALL "npm config set msvs_version 2015"
-    CALL "npm install"
+    CALL npm config set msvs_version 2015
+    CALL npm install
   displayName: 'npm install'
 
 - script: |
-    CALL "npm test"
+    CALL npm test
   displayName: 'npm test'
 
 - task: PublishTestResults@2
